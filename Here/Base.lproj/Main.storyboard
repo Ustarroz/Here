@@ -45,8 +45,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="sceneView" destination="1Oz-1I-etq" id="8Dq-vt-k4Q"/>
-                        <outlet property="statusTextView" destination="Kih-Sh-Bnw" id="e3l-TB-alK"/>
+                        <outlet property="sceneView" destination="Kih-Sh-Bnw" id="Sx3-yc-YnO"/>
+                        <outlet property="statusTextView" destination="1Oz-1I-etq" id="fC2-75-j5k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
