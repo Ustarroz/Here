@@ -10,11 +10,12 @@
 		052BCC518BF25127D748F262 /* Pods_HereTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46521DFB8B30D9408A6B157B /* Pods_HereTests.framework */; };
 		61EB062BEA743699C9C2833B /* Pods_Here.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3164C37CC1A8B2EDF9FDE4D0 /* Pods_Here.framework */; };
 		C458C665200CD5BE0023E0AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C458C664200CD5BE0023E0AF /* AppDelegate.swift */; };
-		C458C667200CD5BE0023E0AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C458C666200CD5BE0023E0AF /* ViewController.swift */; };
+		C458C667200CD5BE0023E0AF /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C458C666200CD5BE0023E0AF /* MainVC.swift */; };
 		C458C66A200CD5BE0023E0AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C458C668200CD5BE0023E0AF /* Main.storyboard */; };
 		C458C66C200CD5BE0023E0AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C458C66B200CD5BE0023E0AF /* Assets.xcassets */; };
 		C458C66F200CD5BE0023E0AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C458C66D200CD5BE0023E0AF /* LaunchScreen.storyboard */; };
 		C458C67A200CD5BE0023E0AF /* HereTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C458C679200CD5BE0023E0AF /* HereTests.swift */; };
+		C4C90A0F200CEE9E004321A5 /* FloatingPointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C90A0E200CEE9E004321A5 /* FloatingPointExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +36,7 @@
 		AFD9E6239370014586333252 /* Pods-Here.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Here.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Here/Pods-Here.debug.xcconfig"; sourceTree = "<group>"; };
 		C458C661200CD5BE0023E0AF /* Here.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Here.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C458C664200CD5BE0023E0AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C458C666200CD5BE0023E0AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C458C666200CD5BE0023E0AF /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		C458C669200CD5BE0023E0AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C458C66B200CD5BE0023E0AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C458C66E200CD5BE0023E0AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -43,6 +44,7 @@
 		C458C675200CD5BE0023E0AF /* HereTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HereTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C458C679200CD5BE0023E0AF /* HereTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HereTests.swift; sourceTree = "<group>"; };
 		C458C67B200CD5BE0023E0AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4C90A0E200CEE9E004321A5 /* FloatingPointExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPointExtension.swift; sourceTree = "<group>"; };
 		EC873A373CDADFDE5D2A1BA1 /* Pods-HereTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HereTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HereTests/Pods-HereTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,6 +111,7 @@
 		C458C663200CD5BE0023E0AF /* Here */ = {
 			isa = PBXGroup;
 			children = (
+				C4C90A0D200CEE76004321A5 /* Extensions */,
 				C458C685200CD6F90023E0AF /* Controller */,
 				C458C684200CD6EC0023E0AF /* Model */,
 				C458C664200CD5BE0023E0AF /* AppDelegate.swift */,
@@ -139,10 +142,18 @@
 		C458C685200CD6F90023E0AF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				C458C666200CD5BE0023E0AF /* ViewController.swift */,
+				C458C666200CD5BE0023E0AF /* MainVC.swift */,
 			);
 			name = Controller;
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		C4C90A0D200CEE76004321A5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C4C90A0E200CEE9E004321A5 /* FloatingPointExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,8 +377,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C458C667200CD5BE0023E0AF /* ViewController.swift in Sources */,
+				C458C667200CD5BE0023E0AF /* MainVC.swift in Sources */,
 				C458C665200CD5BE0023E0AF /* AppDelegate.swift in Sources */,
+				C4C90A0F200CEE9E004321A5 /* FloatingPointExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
