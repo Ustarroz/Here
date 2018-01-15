@@ -80,6 +80,7 @@ class MainVC: UIViewController, ARSCNViewDelegate, CLLocationManagerDelegate {
         }
     }
     
+    
     func setStatusText (){
         var text = "Status: \(status!)\n"
         text += "Distance: \(String(format: "%.2f m", distance))"
