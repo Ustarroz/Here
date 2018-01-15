@@ -8,7 +8,6 @@
 
 import UIKit
 import CoreLocation
-import PusherSwift
 import Firebase
 import ARKit
 
@@ -17,7 +16,7 @@ class MainVC: UIViewController, ARSCNViewDelegate, CLLocationManagerDelegate {
     @IBOutlet weak var statusTextView: UITextView!
     
     let locationManager = CLLocationManager()
-    var UserLocation = CLLocation()
+    var userLocation = CLLocation()
     var modelNode:SCNNode!
     let rootNodeName = "exclamation"
     var originalTransform:SCNMatrix4!
@@ -74,10 +73,10 @@ class MainVC: UIViewController, ARSCNViewDelegate, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.last {
+        if let location = locations.last {
             userLocation = location
-            status = "Connecting to Pusher..."
-            self.connectToPusher()
+            status = "Connecting to Firebase"
+            //CONNECTION A FIREBASE ICI
         }
     }
     
