@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 extension FloatingPoint {
     func toRadians() -> Self {
         return self * .pi / 180

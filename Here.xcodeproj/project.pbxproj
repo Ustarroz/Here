@@ -16,6 +16,7 @@
 		C458C66F200CD5BE0023E0AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C458C66D200CD5BE0023E0AF /* LaunchScreen.storyboard */; };
 		C458C67A200CD5BE0023E0AF /* HereTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C458C679200CD5BE0023E0AF /* HereTests.swift */; };
 		C4C90A0F200CEE9E004321A5 /* FloatingPointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C90A0E200CEE9E004321A5 /* FloatingPointExtension.swift */; };
+		C4C90A11200CEF99004321A5 /* StringToImagesExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C90A10200CEF99004321A5 /* StringToImagesExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		C458C679200CD5BE0023E0AF /* HereTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HereTests.swift; sourceTree = "<group>"; };
 		C458C67B200CD5BE0023E0AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4C90A0E200CEE9E004321A5 /* FloatingPointExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPointExtension.swift; sourceTree = "<group>"; };
+		C4C90A10200CEF99004321A5 /* StringToImagesExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringToImagesExtension.swift; sourceTree = "<group>"; };
 		EC873A373CDADFDE5D2A1BA1 /* Pods-HereTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HereTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HereTests/Pods-HereTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				C4C90A0E200CEE9E004321A5 /* FloatingPointExtension.swift */,
+				C4C90A10200CEF99004321A5 /* StringToImagesExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C458C667200CD5BE0023E0AF /* MainVC.swift in Sources */,
+				C4C90A11200CEF99004321A5 /* StringToImagesExtension.swift in Sources */,
 				C458C665200CD5BE0023E0AF /* AppDelegate.swift in Sources */,
 				C4C90A0F200CEE9E004321A5 /* FloatingPointExtension.swift in Sources */,
 			);
