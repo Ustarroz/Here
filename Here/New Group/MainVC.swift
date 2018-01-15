@@ -63,6 +63,24 @@ class MainVC: UIViewController, ARSCNViewDelegate, CLLocationManagerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error.localizedDescription)
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse {
+            locationManager.requestLocation()
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.last {
+            userLocation = location
+            status = "Connecting to Pusher..."
+            self.connectToPusher()
+        }
+    }
+    
     func setStatusText (){
         var text = "Status: \(status!)\n"
         text += "Distance: \(String(format: "%.2f m", distance))"
