@@ -15,10 +15,12 @@
 		C458C66C200CD5BE0023E0AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C458C66B200CD5BE0023E0AF /* Assets.xcassets */; };
 		C458C66F200CD5BE0023E0AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C458C66D200CD5BE0023E0AF /* LaunchScreen.storyboard */; };
 		C458C67A200CD5BE0023E0AF /* HereTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C458C679200CD5BE0023E0AF /* HereTests.swift */; };
+		C4826C61200F90A3007C9F01 /* ChoiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4826C60200F90A3007C9F01 /* ChoiceVC.swift */; };
+		C4826C63200F922F007C9F01 /* SendVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4826C62200F922F007C9F01 /* SendVC.swift */; };
+		C4826C65200F9242007C9F01 /* FindVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4826C64200F9242007C9F01 /* FindVC.swift */; };
 		C4C90A0F200CEE9E004321A5 /* FloatingPointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C90A0E200CEE9E004321A5 /* FloatingPointExtension.swift */; };
 		C4C90A11200CEF99004321A5 /* StringToImagesExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C90A10200CEF99004321A5 /* StringToImagesExtension.swift */; };
 		C4C90A13200CF04C004321A5 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = C4C90A12200CF04C004321A5 /* art.scnassets */; };
-		C4C90A16200D0E29004321A5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4C90A15200D0E29004321A5 /* GoogleService-Info.plist */; };
 		C4C90A18200D0F11004321A5 /* Dataservices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C90A17200D0F11004321A5 /* Dataservices.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,10 +50,13 @@
 		C458C675200CD5BE0023E0AF /* HereTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HereTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C458C679200CD5BE0023E0AF /* HereTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HereTests.swift; sourceTree = "<group>"; };
 		C458C67B200CD5BE0023E0AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4826C5F200F6E4B007C9F01 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C4826C60200F90A3007C9F01 /* ChoiceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceVC.swift; sourceTree = "<group>"; };
+		C4826C62200F922F007C9F01 /* SendVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendVC.swift; sourceTree = "<group>"; };
+		C4826C64200F9242007C9F01 /* FindVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindVC.swift; sourceTree = "<group>"; };
 		C4C90A0E200CEE9E004321A5 /* FloatingPointExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPointExtension.swift; sourceTree = "<group>"; };
 		C4C90A10200CEF99004321A5 /* StringToImagesExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringToImagesExtension.swift; sourceTree = "<group>"; };
 		C4C90A12200CF04C004321A5 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
-		C4C90A15200D0E29004321A5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C4C90A17200D0F11004321A5 /* Dataservices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dataservices.swift; sourceTree = "<group>"; };
 		EC873A373CDADFDE5D2A1BA1 /* Pods-HereTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HereTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HereTests/Pods-HereTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,7 +133,7 @@
 				C458C66B200CD5BE0023E0AF /* Assets.xcassets */,
 				C458C66D200CD5BE0023E0AF /* LaunchScreen.storyboard */,
 				C458C670200CD5BE0023E0AF /* Info.plist */,
-				C4C90A15200D0E29004321A5 /* GoogleService-Info.plist */,
+				C4826C5F200F6E4B007C9F01 /* GoogleService-Info.plist */,
 				C4C90A12200CF04C004321A5 /* art.scnassets */,
 			);
 			path = Here;
@@ -154,6 +159,9 @@
 			isa = PBXGroup;
 			children = (
 				C458C666200CD5BE0023E0AF /* MainVC.swift */,
+				C4826C60200F90A3007C9F01 /* ChoiceVC.swift */,
+				C4826C62200F922F007C9F01 /* SendVC.swift */,
+				C4826C64200F9242007C9F01 /* FindVC.swift */,
 			);
 			name = Controller;
 			path = "New Group";
@@ -267,7 +275,6 @@
 			files = (
 				C458C66F200CD5BE0023E0AF /* LaunchScreen.storyboard in Resources */,
 				C4C90A13200CF04C004321A5 /* art.scnassets in Resources */,
-				C4C90A16200D0E29004321A5 /* GoogleService-Info.plist in Resources */,
 				C458C66C200CD5BE0023E0AF /* Assets.xcassets in Resources */,
 				C458C66A200CD5BE0023E0AF /* Main.storyboard in Resources */,
 			);
@@ -400,8 +407,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C458C667200CD5BE0023E0AF /* MainVC.swift in Sources */,
+				C4826C65200F9242007C9F01 /* FindVC.swift in Sources */,
+				C4826C63200F922F007C9F01 /* SendVC.swift in Sources */,
 				C4C90A11200CEF99004321A5 /* StringToImagesExtension.swift in Sources */,
 				C458C665200CD5BE0023E0AF /* AppDelegate.swift in Sources */,
+				C4826C61200F90A3007C9F01 /* ChoiceVC.swift in Sources */,
 				C4C90A0F200CEE9E004321A5 /* FloatingPointExtension.swift in Sources */,
 				C4C90A18200D0F11004321A5 /* Dataservices.swift in Sources */,
 			);

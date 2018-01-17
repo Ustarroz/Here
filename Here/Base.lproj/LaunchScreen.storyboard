@@ -1,7 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,5 +25,53 @@
             </objects>
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="frX-5r-Q6B">
+            <objects>
+                <viewController id="e8i-5p-tQa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yi3-KY-vmo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MainPageHereIos" translatesAutoresizingMaskIntoConstraints="NO" id="QaQ-7t-kGD">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AvE-nB-JgV">
+                                <rect key="frame" x="13" y="94" width="348" height="181"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="348" id="GE9-37-iXm"/>
+                                    <constraint firstAttribute="height" constant="181" id="dZv-4u-jc1"/>
+                                </constraints>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jw9-fR-ZK7">
+                                <rect key="frame" x="16" y="435" width="348" height="197"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="197" id="WL7-x2-z6r"/>
+                                </constraints>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AvE-nB-JgV" firstAttribute="top" secondItem="7Yt-tw-hah" secondAttribute="top" constant="74" id="8zf-Ac-iqF"/>
+                            <constraint firstItem="AvE-nB-JgV" firstAttribute="leading" secondItem="7Yt-tw-hah" secondAttribute="leading" constant="13" id="QT3-sx-xT5"/>
+                            <constraint firstItem="QaQ-7t-kGD" firstAttribute="top" secondItem="7Yt-tw-hah" secondAttribute="top" id="TY0-Lx-TnD"/>
+                            <constraint firstItem="jw9-fR-ZK7" firstAttribute="leading" secondItem="7Yt-tw-hah" secondAttribute="leading" constant="16" id="WwQ-eV-lvm"/>
+                            <constraint firstItem="QaQ-7t-kGD" firstAttribute="leading" secondItem="7Yt-tw-hah" secondAttribute="leading" id="dC7-g1-HII"/>
+                            <constraint firstItem="7Yt-tw-hah" firstAttribute="trailing" secondItem="AvE-nB-JgV" secondAttribute="trailing" constant="14" id="dYk-iU-2B1"/>
+                            <constraint firstItem="7Yt-tw-hah" firstAttribute="trailing" secondItem="jw9-fR-ZK7" secondAttribute="trailing" constant="11" id="kUQ-NM-ev6"/>
+                            <constraint firstItem="7Yt-tw-hah" firstAttribute="trailing" secondItem="QaQ-7t-kGD" secondAttribute="trailing" id="o94-Is-nPT"/>
+                            <constraint firstItem="7Yt-tw-hah" firstAttribute="bottom" secondItem="QaQ-7t-kGD" secondAttribute="bottom" id="qRt-zX-ZjN"/>
+                            <constraint firstItem="7Yt-tw-hah" firstAttribute="bottom" secondItem="jw9-fR-ZK7" secondAttribute="bottom" constant="35" id="tbf-hb-FTi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7Yt-tw-hah"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dNv-Sv-xSD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-767.20000000000005" y="374.66266866566718"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="MainPageHereIos" width="1125" height="2001"/>
+    </resources>
 </document>

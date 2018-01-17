@@ -10,6 +10,21 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="Wt5-w1-rie">
+            <objects>
+                <viewController id="uK1-sG-cuH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4iI-Ow-aJJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="7xe-ah-A9T"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5u5-Up-URW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-767" y="826"/>
+        </scene>
         <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -53,5 +68,73 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
+        <!--ChoiceVC-->
+        <scene sceneID="rpv-35-eQI">
+            <objects>
+                <viewController id="tQt-eo-mpt" customClass="ChoiceVC" customModule="Here" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i31-En-dVs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MainPageHereIos" translatesAutoresizingMaskIntoConstraints="NO" id="fgd-XQ-DZI">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqD-YO-6Qb">
+                                <rect key="frame" x="25" y="69" width="325" height="196"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="196" id="6dq-hd-xBL"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sendPositionIsPushed:" destination="tQt-eo-mpt" eventType="touchUpInside" id="vY4-2X-WgV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mN7-Xf-V3v">
+                                <rect key="frame" x="25" y="446" width="325" height="196"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="196" id="A84-Kq-dLh"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="findFriendsIsPushed:" destination="tQt-eo-mpt" eventType="touchUpInside" id="GY8-PK-fZs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mN7-Xf-V3v" firstAttribute="leading" secondItem="Gip-6K-ARo" secondAttribute="leading" constant="25" id="3RE-gH-0f3"/>
+                            <constraint firstItem="Gip-6K-ARo" firstAttribute="trailing" secondItem="mN7-Xf-V3v" secondAttribute="trailing" constant="25" id="3lK-38-05E"/>
+                            <constraint firstItem="Gip-6K-ARo" firstAttribute="trailing" secondItem="fgd-XQ-DZI" secondAttribute="trailing" id="ISL-Pv-wgm"/>
+                            <constraint firstItem="Gip-6K-ARo" firstAttribute="bottom" secondItem="fgd-XQ-DZI" secondAttribute="bottom" id="Pws-y9-yWW"/>
+                            <constraint firstItem="eqD-YO-6Qb" firstAttribute="top" secondItem="Gip-6K-ARo" secondAttribute="top" constant="49" id="ROe-Ej-SEA"/>
+                            <constraint firstItem="Gip-6K-ARo" firstAttribute="bottom" secondItem="mN7-Xf-V3v" secondAttribute="bottom" constant="25" id="UYO-Z5-l4n"/>
+                            <constraint firstItem="fgd-XQ-DZI" firstAttribute="top" secondItem="i31-En-dVs" secondAttribute="top" id="YKG-pt-xCE"/>
+                            <constraint firstItem="fgd-XQ-DZI" firstAttribute="leading" secondItem="Gip-6K-ARo" secondAttribute="leading" id="kH3-to-2WN"/>
+                            <constraint firstItem="Gip-6K-ARo" firstAttribute="trailing" secondItem="eqD-YO-6Qb" secondAttribute="trailing" constant="25" id="tHu-Lw-eAG"/>
+                            <constraint firstItem="eqD-YO-6Qb" firstAttribute="leading" secondItem="Gip-6K-ARo" secondAttribute="leading" constant="25" id="usy-5x-KA1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Gip-6K-ARo"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vpd-YW-mgv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1682" y="133"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="vCX-tq-Agd">
+            <objects>
+                <viewController id="BsL-j5-dV2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="08m-kM-cZF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="hds-pI-84V"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aaI-Z9-o4V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-839" y="-543"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="MainPageHereIos" width="1125" height="2001"/>
+    </resources>
 </document>
