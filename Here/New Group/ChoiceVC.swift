@@ -22,12 +22,12 @@ class ChoiceVC: UIViewController {
     }
     
     @IBAction func sendPositionIsPushed(_ sender: Any) {
-        
+        performSegue(withIdentifier: "ChoiceToSend", sender: self)
     }
     
  
     @IBAction func findFriendsIsPushed(_ sender: Any) {
-        
+        performSegue(withIdentifier: "ChoiceToFind", sender: self)
     }
  
 }
