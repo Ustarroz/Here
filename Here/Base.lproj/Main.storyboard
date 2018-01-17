@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BsL-j5-dV2">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--FindVC-->
         <scene sceneID="Wt5-w1-rie">
             <objects>
-                <viewController id="uK1-sG-cuH" sceneMemberID="viewController">
+                <viewController id="uK1-sG-cuH" customClass="FindVC" customModule="Here" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4iI-Ow-aJJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,7 +23,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5u5-Up-URW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-767" y="826"/>
+            <point key="canvasLocation" x="-767.20000000000005" y="825.33733133433293"/>
         </scene>
         <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
@@ -118,23 +118,79 @@
             </objects>
             <point key="canvasLocation" x="-1682" y="133"/>
         </scene>
-        <!--View Controller-->
+        <!--SendVC-->
         <scene sceneID="vCX-tq-Agd">
             <objects>
-                <viewController id="BsL-j5-dV2" sceneMemberID="viewController">
+                <viewController id="BsL-j5-dV2" customClass="SendVC" customModule="Here" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="08m-kM-cZF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 2" translatesAutoresizingMaskIntoConstraints="NO" id="mbe-64-jNs">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Here! Copy" translatesAutoresizingMaskIntoConstraints="NO" id="evk-UL-etE">
+                                <rect key="frame" x="118" y="20" width="138" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="Nw5-BM-FC7"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Donnez votre positio Copy" translatesAutoresizingMaskIntoConstraints="NO" id="IjH-Eh-aFM">
+                                <rect key="frame" x="67" y="131" width="240" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="J8B-hl-dIW"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FdN-qQ-sw8">
+                                <rect key="frame" x="65" y="224" width="245" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="1sR-zg-bPa"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xPy-64-6tM">
+                                <rect key="frame" x="62" y="457" width="250" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="SPz-qR-Kdn"/>
+                                </constraints>
+                                <state key="normal" image="Next_icon"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hds-pI-84V" firstAttribute="trailing" secondItem="IjH-Eh-aFM" secondAttribute="trailing" constant="68" id="0EP-KY-Mh2"/>
+                            <constraint firstItem="FdN-qQ-sw8" firstAttribute="top" secondItem="IjH-Eh-aFM" secondAttribute="bottom" constant="27" id="67e-HA-LeV"/>
+                            <constraint firstItem="mbe-64-jNs" firstAttribute="leading" secondItem="hds-pI-84V" secondAttribute="leading" id="6Rc-wo-v7C"/>
+                            <constraint firstItem="FdN-qQ-sw8" firstAttribute="leading" secondItem="hds-pI-84V" secondAttribute="leading" constant="65" id="ATF-Lv-Wqx"/>
+                            <constraint firstItem="evk-UL-etE" firstAttribute="leading" secondItem="hds-pI-84V" secondAttribute="leading" constant="118" id="AyO-Qr-kcm"/>
+                            <constraint firstItem="IjH-Eh-aFM" firstAttribute="leading" secondItem="hds-pI-84V" secondAttribute="leading" constant="67" id="Fbg-Lg-JGu"/>
+                            <constraint firstItem="hds-pI-84V" firstAttribute="bottom" secondItem="xPy-64-6tM" secondAttribute="bottom" constant="130" id="Fjc-T0-QKI"/>
+                            <constraint firstItem="xPy-64-6tM" firstAttribute="top" secondItem="FdN-qQ-sw8" secondAttribute="bottom" constant="203" id="KyF-k8-k5C"/>
+                            <constraint firstItem="hds-pI-84V" firstAttribute="trailing" secondItem="xPy-64-6tM" secondAttribute="trailing" constant="63" id="QUT-5U-AK6"/>
+                            <constraint firstItem="hds-pI-84V" firstAttribute="trailing" secondItem="FdN-qQ-sw8" secondAttribute="trailing" constant="65" id="UIa-Gz-Q29"/>
+                            <constraint firstItem="evk-UL-etE" firstAttribute="top" secondItem="hds-pI-84V" secondAttribute="top" id="XlO-KB-O7w"/>
+                            <constraint firstItem="mbe-64-jNs" firstAttribute="trailing" secondItem="hds-pI-84V" secondAttribute="trailing" id="nWM-0t-G0G"/>
+                            <constraint firstItem="mbe-64-jNs" firstAttribute="bottom" secondItem="hds-pI-84V" secondAttribute="bottom" id="oQZ-eP-LZL"/>
+                            <constraint firstItem="hds-pI-84V" firstAttribute="trailing" secondItem="evk-UL-etE" secondAttribute="trailing" constant="119" id="qbi-SU-AiG"/>
+                            <constraint firstItem="IjH-Eh-aFM" firstAttribute="top" secondItem="evk-UL-etE" secondAttribute="bottom" constant="54" id="uOd-7I-hiB"/>
+                            <constraint firstItem="xPy-64-6tM" firstAttribute="leading" secondItem="hds-pI-84V" secondAttribute="leading" constant="62" id="wzj-pG-E8j"/>
+                            <constraint firstItem="mbe-64-jNs" firstAttribute="top" secondItem="08m-kM-cZF" secondAttribute="top" id="ydg-ma-FIp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="hds-pI-84V"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aaI-Z9-o4V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-839" y="-543"/>
+            <point key="canvasLocation" x="-839.20000000000005" y="-543.77811094452773"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Donnez votre positio Copy" width="295" height="30"/>
+        <image name="Here! Copy" width="113" height="28"/>
         <image name="MainPageHereIos" width="1125" height="2001"/>
+        <image name="Next_icon" width="297" height="91"/>
+        <image name="Rectangle 2" width="375" height="667"/>
     </resources>
 </document>
