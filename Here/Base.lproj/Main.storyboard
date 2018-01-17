@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BsL-j5-dV2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uK1-sG-cuH">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -17,9 +17,63 @@
                     <view key="view" contentMode="scaleToFill" id="4iI-Ow-aJJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FindRectangle" translatesAutoresizingMaskIntoConstraints="NO" id="dfp-ZO-SaV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Here! Copy" translatesAutoresizingMaskIntoConstraints="NO" id="DD0-CK-qZF">
+                                <rect key="frame" x="115" y="20" width="145" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="hOR-Up-RD4"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Trouvez vos amis" translatesAutoresizingMaskIntoConstraints="NO" id="2Y8-R9-eUq">
+                                <rect key="frame" x="67" y="135" width="240" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="U0Z-ym-5x3"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CXT-dz-nbJ">
+                                <rect key="frame" x="67" y="227" width="245" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="9cO-Sq-vXN"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="continue" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j4U-Zo-IWV">
+                                <rect key="frame" x="64" y="457" width="247" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="LVR-mq-n1j"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="FindButton"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dfp-ZO-SaV" firstAttribute="trailing" secondItem="7xe-ah-A9T" secondAttribute="trailing" id="7CR-Px-vii"/>
+                            <constraint firstItem="7xe-ah-A9T" firstAttribute="bottom" secondItem="j4U-Zo-IWV" secondAttribute="bottom" constant="130" id="Aa4-u0-mPk"/>
+                            <constraint firstItem="CXT-dz-nbJ" firstAttribute="leading" secondItem="7xe-ah-A9T" secondAttribute="leading" constant="67" id="HvO-2I-IUv"/>
+                            <constraint firstItem="7xe-ah-A9T" firstAttribute="trailing" secondItem="2Y8-R9-eUq" secondAttribute="trailing" constant="68" id="JWL-Yv-tBH"/>
+                            <constraint firstItem="DD0-CK-qZF" firstAttribute="top" secondItem="7xe-ah-A9T" secondAttribute="top" id="JZg-gW-XfD"/>
+                            <constraint firstItem="j4U-Zo-IWV" firstAttribute="leading" secondItem="7xe-ah-A9T" secondAttribute="leading" constant="64" id="K8m-s0-X9M"/>
+                            <constraint firstItem="7xe-ah-A9T" firstAttribute="trailing" secondItem="CXT-dz-nbJ" secondAttribute="trailing" constant="63" id="PXE-jw-Czs"/>
+                            <constraint firstItem="7xe-ah-A9T" firstAttribute="trailing" secondItem="DD0-CK-qZF" secondAttribute="trailing" constant="115" id="QC2-X1-9J8"/>
+                            <constraint firstItem="2Y8-R9-eUq" firstAttribute="top" secondItem="DD0-CK-qZF" secondAttribute="bottom" constant="82" id="XGR-9b-SEP"/>
+                            <constraint firstItem="DD0-CK-qZF" firstAttribute="leading" secondItem="7xe-ah-A9T" secondAttribute="leading" constant="115" id="afm-Uf-QYm"/>
+                            <constraint firstItem="2Y8-R9-eUq" firstAttribute="leading" secondItem="7xe-ah-A9T" secondAttribute="leading" constant="67" id="oOo-xt-BBF"/>
+                            <constraint firstItem="CXT-dz-nbJ" firstAttribute="top" secondItem="2Y8-R9-eUq" secondAttribute="bottom" constant="26" id="qi9-0d-KpV"/>
+                            <constraint firstItem="dfp-ZO-SaV" firstAttribute="leading" secondItem="7xe-ah-A9T" secondAttribute="leading" id="soV-Vi-rrV"/>
+                            <constraint firstItem="dfp-ZO-SaV" firstAttribute="top" secondItem="4iI-Ow-aJJ" secondAttribute="top" id="tS4-Xm-zCk"/>
+                            <constraint firstItem="dfp-ZO-SaV" firstAttribute="bottom" secondItem="7xe-ah-A9T" secondAttribute="bottom" id="yeg-gt-aGj"/>
+                            <constraint firstItem="7xe-ah-A9T" firstAttribute="trailing" secondItem="j4U-Zo-IWV" secondAttribute="trailing" constant="64" id="zFb-Up-6MD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="7xe-ah-A9T"/>
                     </view>
+                    <connections>
+                        <outlet property="IdUserTextField" destination="CXT-dz-nbJ" id="qhW-iu-fZ7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5u5-Up-URW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -188,9 +242,12 @@
     </scenes>
     <resources>
         <image name="Donnez votre positio Copy" width="295" height="30"/>
+        <image name="FindButton" width="313" height="91"/>
+        <image name="FindRectangle" width="375" height="667"/>
         <image name="Here! Copy" width="113" height="28"/>
         <image name="MainPageHereIos" width="1125" height="2001"/>
         <image name="Next_icon" width="297" height="91"/>
         <image name="Rectangle 2" width="375" height="667"/>
+        <image name="Trouvez vos amis" width="227" height="23"/>
     </resources>
 </document>

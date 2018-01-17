@@ -8,10 +8,14 @@
 
 import UIKit
 
-class FindVC: UIViewController {
+class FindVC: UIViewController, UITextFieldDelegate {
 
+   
+    @IBOutlet weak var IdUserTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        IdUserTextField.delegate = self
 
         // Do any additional setup after loading the view.
     }
@@ -22,14 +26,8 @@ class FindVC: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
-    */
-
 }
