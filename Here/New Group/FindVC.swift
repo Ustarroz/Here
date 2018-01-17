@@ -30,4 +30,8 @@ class FindVC: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
         return false
     }
+  
+    @IBAction func backButtonIsPressed(_ sender: Any) {
+        dismiss(animated: true)
+    }
 }

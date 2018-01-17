@@ -27,4 +27,9 @@ class SendVC: UIViewController, UITextFieldDelegate {
         return false
     }
 
+    @IBAction func backButtonIsPressed(_ sender: Any) {
+        dismiss(animated: true) {
+            
+        }
+    }
 }
