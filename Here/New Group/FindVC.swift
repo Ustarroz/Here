@@ -34,4 +34,9 @@ class FindVC: UIViewController, UITextFieldDelegate {
     @IBAction func backButtonIsPressed(_ sender: Any) {
         dismiss(animated: true)
     }
+    
+    @IBAction func findButtonIsPressed(_ sender: Any) {
+        // Vérifier si le numéro est valide et corresponds a une id en database
+        //si oui on perform -> mainVC sinon wizz button
+    }
 }

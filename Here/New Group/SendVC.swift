@@ -32,4 +32,8 @@ class SendVC: UIViewController, UITextFieldDelegate {
             
         }
     }
+    
+    @IBAction func sendButtonIsPressed(_ sender: Any) {
+        // On get la position du user , on crée sa position en base de donnée, on get l'ID du post et l'affiche dans le textfield
+    }
 }

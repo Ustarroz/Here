@@ -48,6 +48,10 @@
                                     <constraint firstAttribute="height" constant="80" id="LVR-mq-n1j"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="FindButton"/>
+                                <connections>
+                                    <action selector="findButtonIsPressed:" destination="uK1-sG-cuH" eventType="touchUpInside" id="nKu-i0-CdQ"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="FindToMain" id="VL3-le-Qhx"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EcB-Wg-IWL">
                                 <rect key="frame" x="16" y="24" width="34" height="25"/>
@@ -88,7 +92,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5u5-Up-URW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-767.20000000000005" y="825.33733133433293"/>
+            <point key="canvasLocation" x="-1959" y="858"/>
         </scene>
         <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
@@ -131,7 +135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+            <point key="canvasLocation" x="-975" y="858"/>
         </scene>
         <!--ChoiceVC-->
         <scene sceneID="rpv-35-eQI">
@@ -220,6 +224,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="sendButtonIsPressed:" destination="BsL-j5-dV2" eventType="editingDidEnd" id="W1d-p4-X3T"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xPy-64-6tM">
                                 <rect key="frame" x="62" y="457" width="250" height="80"/>
@@ -268,7 +275,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aaI-Z9-o4V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-839.20000000000005" y="-543.77811094452773"/>
+            <point key="canvasLocation" x="-975" y="72"/>
         </scene>
     </scenes>
     <resources>
