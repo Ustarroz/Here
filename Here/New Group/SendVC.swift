@@ -9,14 +9,21 @@
 import UIKit
 import CoreLocation
 
-class SendVC: UIViewController, UITextFieldDelegate {
+class SendVC: UIViewController, UITextFieldDelegate, CLLocationManagerDelegate {
 
     @IBOutlet weak var UserIdTextField: UITextField!
+    let locationManager = CLLocationManager()
+    var userLocation = CLLocation()
+    var heading : Double! = 0.0
+    var distance : Float = 0.0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         UserIdTextField.delegate = self
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,6 +39,27 @@ class SendVC: UIViewController, UITextFieldDelegate {
         dismiss(animated: true) {
             
         }
+    }
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error.localizedDescription)
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse {
+            locationManager.requestLocation()
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.last {
+            userLocation = location
+            //CONNECTION A FIREBASE ICI
+        }
+    }
+    
+    func updateLocation(_ latitude : Double, _ longitude : Double) {
+        let location = CLLocation(latitude: latitude, longitude: longitude)
+        self.distance = Float(location.distance(from: self.userLocation))
     }
     
     @IBAction func sendButtonIsPressed(_ sender: Any) {
