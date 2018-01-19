@@ -15,7 +15,7 @@ class Dataservice {
     static let instance = Dataservice()
     
     private var _REF_BASE = DB_BASE
-    private var _REF_USERS = DB_BASE.child("users")
+    private var _REF_USERS = DB_BASE.child("userlocation")
     
     var REF_BASE: DatabaseReference {
         return _REF_BASE
@@ -37,6 +37,15 @@ class Dataservice {
                     handler(user.childSnapshot(forPath: "email").value as! String)
                 }
             }
+        }
+    }
+    
+    func UploadPost(message: String , forUID uid: String, groupKey: String?, sendComplete: @escaping(_ status: Bool) ->()) {
+        if groupKey != nil {
+            
+        } else {
+            REF_USERS.childByAutoId().updateChildValues(["spot": message, "senderId": uid])
+            sendComplete(true)
         }
     }
 }
