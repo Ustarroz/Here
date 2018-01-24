@@ -4,8 +4,8 @@
   <contributor>
    <authoring_tool>SceneKit Collada Exporter v1.0</authoring_tool>
   </contributor>
-  <created>2018-01-11T11:18:29Z</created>
-  <modified>2018-01-11T11:18:29Z</modified>
+  <created>2018-01-24T11:48:10Z</created>
+  <modified>2018-01-24T11:48:10Z</modified>
   <unit meter="1.000000"/>
   <up_axis>Z_UP</up_axis>
  </asset>
@@ -72,7 +72,7 @@
   </light>
  </library_lights>
  <library_materials>
-  <material id="_1_-_Default-material" name="exclamation">
+  <material id="_1_-_Default-material" name="Body">
    <instance_effect url="#effect__1_-_Default-material"/>
   </material>
  </library_materials>
@@ -168,7 +168,6 @@
     <instance_light url="#Lamp_001-light"/>
    </node>
    <node id="exclamation" name="exclamation">
-    <matrix>0.0254 0 0 0 0 0.0254 1.11027e-09 1.10849e-09 0 -1.11027e-09 0.0254 0.3258931 0 0 0 1 </matrix>
     <instance_geometry url="#geometry1">
      <bind_material>
       <technique_common>

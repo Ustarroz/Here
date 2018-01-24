@@ -10,6 +10,7 @@ import UIKit
 import CoreLocation
 import Firebase
 import ARKit
+import SceneKit
 import PusherSwift
 
 class MainVC: UIViewController, ARSCNViewDelegate, CLLocationManagerDelegate {
@@ -88,7 +89,6 @@ class MainVC: UIViewController, ARSCNViewDelegate, CLLocationManagerDelegate {
     
     func connectToPusher() {
         let channel = pusher.subscribe("private-channel")
-        
         let _ = channel.bind(eventName: "client-new-location", callback: { (data: Any?) -> Void in
             if let data = data as? [String : AnyObject] {
                 if let latitude = Double(data["latitude"] as! String),
@@ -100,7 +100,6 @@ class MainVC: UIViewController, ARSCNViewDelegate, CLLocationManagerDelegate {
                 }
             }
         })
-        
         pusher.connect()
         status = "Waiting to receive location events..."
     }
@@ -108,16 +107,32 @@ class MainVC: UIViewController, ARSCNViewDelegate, CLLocationManagerDelegate {
     func updateLocation(_ latitude : Double, _ longitude : Double) {
         let location = CLLocation(latitude: latitude, longitude: longitude)
         self.distance = Float(location.distance(from: self.userLocation))
+        
         if self.modelNode == nil {
-            let modelScene = SCNScene(named: "art.scnassets/Car.dae")!
+            let modelScene = SCNScene(named: "art.scnassets/exclamation.dae")!
             self.modelNode = modelScene.rootNode.childNode(withName: rootNodeName, recursively: true)!
             let (minBox, maxBox) = self.modelNode.boundingBox
             self.modelNode.pivot = SCNMatrix4MakeTranslation(0, (maxBox.y - minBox.y)/2, 0)
             self.originalTransform = self.modelNode.transform
             positionModel(location)
             sceneView.scene.rootNode.addChildNode(self.modelNode)
-
+            let arrow = makeBillboardNode("⬇️".image()!)
+            arrow.position = SCNVector3Make(0, 4, 0)
+            self.modelNode.addChildNode(arrow)
+        } else {
+            SCNTransaction.begin()
+            SCNTransaction.animationDuration = 1.0
+            positionModel(location)
+            SCNTransaction.commit()
         }
+    }
+    
+    func makeBillboardNode(_ image: UIImage) -> SCNNode {
+        let plane = SCNPlane(width: 10, height: 10)
+        plane.firstMaterial!.diffuse.contents = image
+        let node = SCNNode(geometry: plane)
+        node.constraints = [SCNBillboardConstraint()]
+        return node
     }
     
     func positionModel(_ location: CLLocation) {
