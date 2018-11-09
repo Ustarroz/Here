@@ -8,7 +8,6 @@
 
 import UIKit
 import CoreLocation
-import Firebase
 import ARKit
 import SceneKit
 import PusherSwift
@@ -61,7 +60,7 @@ class MainVC: UIViewController, ARSCNViewDelegate, CLLocationManagerDelegate {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         status = "Getting user location"
-        statusTextView.textContainerInset = UIEdgeInsetsMake(20.0, 10.0, 10.0, 0.0)
+        statusTextView.textContainerInset = UIEdgeInsets.init(top: 20.0, left: 10.0, bottom: 10.0, right: 0.0)
     }
 
     override func didReceiveMemoryWarning() {
